@@ -78,6 +78,9 @@ rf = RandomForestClassifier(
     n_jobs=-1
 )
 rf.fit(X_train_sm, y_train_sm)
+import joblib
+joblib.dump(rf, 'model.joblib')
+
 
 # 🔮 Predict
 probs = rf.predict_proba(X_test)

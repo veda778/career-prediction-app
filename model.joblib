@@ -9,6 +9,7 @@ from sklearn.cluster import KMeans
 from imblearn.over_sampling import SMOTE
 import matplotlib.pyplot as plt
 import seaborn as sns
+import joblib
 
 # 📁 Load dataset
 df = pd.read_csv(r"C:\Users\Veda\OneDrive\Desktop\ML\ML\smote_balanced_data.csv")
@@ -95,13 +96,4 @@ for i, row in enumerate(probs):
 accuracy = accuracy_score(y_test, corrected_preds)
 print(f"\n✅ Final Accuracy: {accuracy:.4f}")
 print("\n📋 Classification Report:\n", classification_report(y_test, corrected_preds, target_names=label_encoder.classes_))
-
-import joblib
-
-
-joblib.dump(rf, 'The_Syntax_Ninjas_model.joblib')  # Use your team name if needed
-import pickle
-
-# Assuming your trained model is called model
-with open('model.pkl', 'wb') as f:
-    pickle.dump(model, f)
+joblib.dump(model, "mosel.joblib")  # Use your team name if needed

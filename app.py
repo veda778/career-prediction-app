@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load model and label encoder
-model = joblib.load("The_Syntax_Ninjas_model.joblib")
+model = joblib.load("model.joblib")
 label_encoder = joblib.load("label_encoder.joblib")
 
 # App Title

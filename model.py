@@ -99,4 +99,4 @@ for i, row in enumerate(probs):
 accuracy = accuracy_score(y_test, corrected_preds)
 print(f"\n✅ Final Accuracy: {accuracy:.4f}")
 print("\n📋 Classification Report:\n", classification_report(y_test, corrected_preds, target_names=label_encoder.classes_))
-joblib.dump(model, "model.joblib")  # Use your team name if needed
+

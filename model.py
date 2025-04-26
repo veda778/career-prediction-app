@@ -12,7 +12,7 @@ import seaborn as sns
 import joblib
 
 # 📁 Load dataset
-df = pd.read_csv(r"C:\Users\Veda\OneDrive\Desktop\ML\ML\smote_balanced_data.csv")
+df = pd.read_csv(r"smote_balanced_data.csv")
 df = df.drop(columns=["Favorite Color", "Birth Month"])
 target = "What would you like to become when you grow up"
 
